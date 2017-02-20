@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+
 
 ---
 
@@ -26,9 +26,18 @@ The goals / steps of this project are the following:
 My pipeline consisted of 5 steps:
 
 1. grayscale
+
+     <img src="/examples/grayscale.png" white>
+     
 2. gaussian blur
 3. canny edge
+    
+    <img src="/examples/canny-edge.png" white>
+    
 4. mask region of interest
+
+    <img src="/examples/mask-region-canny.png" white>
+    
 5. overlay the lines on the input image
 
 
