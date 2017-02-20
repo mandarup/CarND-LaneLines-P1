@@ -33,26 +33,28 @@ My pipeline consisted of 5 steps:
 
 
 
-!video[white lines]("white.mp4"){size=10}
+<embed type="video" src="./white.mp4">
 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating right and left lines using slope (positive slope for left lines and negative slope for right lines). Then average the slope and center of all left lines (similarly right lines) and then extrapolating the line.
 
 If you'd like to include images to show how the pipeline works, here is how to include an image:
 
-![alt text][image1]
+![alt text][./test_images/output_solidWhiteCurve.jpg]
+
+[image2]:[./white.gif]
 
 
-###2. Identify potential shortcomings with your current pipeline
+###2. Potential shortcomings with current pipeline
+
+1. Intersections: intersections usually have no lane lines and this pipeline will run into trouble
+2. Sharp turns: This pipeline may run into trouble when there are sharp turns
+3. Snow, rain, night, shadows, no lane lines: Canny edge detection may fail due to lack in contrast gradient in these cases, hence failure of this pipeline.
+4. Only detects one lane.
 
 
-One potential shortcoming would be what would happen when ...
-
-Another shortcoming could be ...
 
 
-###3. Suggest possible improvements to your pipeline
+###3. Possible improvements to this pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+1. Use regression with quadratic or higher order terms in order to be able to fit the curves
+2. Ability to predict lane lines on patches of road where there aren't any.
