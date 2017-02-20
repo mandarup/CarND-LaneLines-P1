@@ -25,23 +25,33 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps:
 
-    1. grayscale
-    2. gaussian blur
-    3. canny edge
-    4. mask region of interest
-    5. overlay the lines on the input image
+1. grayscale
+2. gaussian blur
+3. canny edge
+4. mask region of interest
+5. overlay the lines on the input image
 
 
-
-<embed type="video" src="./white.mp4">
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating right and left lines using slope (positive slope for left lines and negative slope for right lines). Then average the slope and center of all left lines (similarly right lines) and then extrapolating the line.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image:
+Here are the outputs of lane line videos:
 
-![alt text][./test_images/output_solidWhiteCurve.jpg]
 
-[image2]:[./white.gif]
+1. White lane lines
+
+    <img src="/white.gif" white>
+
+
+2. Yellow lane line
+
+    <img src="/yellow.gif" yellow>
+
+
+3. Optional challenge
+
+    <img src="/extra.gif" extra>
+
 
 
 ###2. Potential shortcomings with current pipeline
